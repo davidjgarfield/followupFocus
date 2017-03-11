@@ -4,42 +4,65 @@
 Megalayer GPL Project
 http://www.megalayer.com
 
-# About (High Level Overview)
-A FREE GPL auto-reply followup scripting automation project (usually charged for by many 'email services') 
-MySQL table tracking lead (website form signups) acquisition  
-  - Script updates +1 day to each lead on the list  
-  - Provided UI Form gives lead list owner abililty to create up to 5 auto-reply emails,
-    - Each email reply retains how many days old a lead must reach before it can be emailed
-  - Script checks #days lead exists and when the days match the rule, script sends desired message 
+# About
+A FREE GPL auto-reply dynamic autoresponder followup script. 
+This automation project (usually charged for by many expensive 'email service suites') is generally pretty easy to code and impliment
+so instead of just greedily coding it out for myself, I figured I'd develop a fully funcitonal 'lite' version in GPL and if there's a need
+for premium features, well I could then charge a small fee to unlock them still keeping it fair in helping our fellow marketing audience.
+
+MySQL table tracking lead (website form signups) acquisition
+  - Script updates +1 day to each lead on the list
+  - Provided UI Form gives lead list owner abililty to create up to 5 auto-reply emails
+  - Each email reply retains how many days old a lead must reach before it can be emailed
+  - Script checks #days lead exists and when the days match the rule, script sends desired message
+
 
 ## How It Works
-Followup script can be set to run daily as a chron, or run it once a day manually  
--OR, perhaps worth creating a way a sited pageload would fire the script to run once per day so as long as a website had any traffic at all that day, the script would run once. 
-   Folowup Focus sends out multiple time lapsed promotional emails to leads based on when they are acquired.  
+Followup script can be set to run daily as a chron, or run it once a day manually
+  -OR, perhaps worth creating a way a sited pageload would fire the script to run once per day so as long
+  as a website had any traffic at all that day, the script would run once.
+  Folowup Focus sends out multiple time lapsed promotional emails to leads based on when they are acquired.
 
-## Desired Roadmap 
-Desired Future Features: 
+
+## Desired Roadmap
+Desired Future Features:
 v1.5 Update lead data to confirm/track email viewed/opened [pixel serve driven]
 v1.6 Display quantification of email campains / graph emails opened and website return visit CTA ratios
-v1.7 Cookie tracking data ammend lead detail for first and last page lead came from, which form ver lead used, 
+v1.7 Cookie tracking data ammend lead detail for first and last page lead came from, which form ver lead used
 v1.8 Ability to set up more than one campaign for same lead list say 50/50 for simple A/B testing
 v2.0 Create rules to modify future email campaign versions based on a leads previous actions
 
+
 ## Description Detail
-When a specific number of days later (say it's been 2 days) a new lead's age is now 2.  FollowupFocus generates and emails a desired first "Thank you, Name" reply for each 2 day old lead.    
-
-To do so, front end campaign creation and management interfaces are needed to: '
-
+When a specific number of days later (say it's been 2 days) a new lead's age is now 2.
+FollowupFocus generates and emails a desired first "Thank you, Name" reply for each 2 day old lead.
+To do so, front end campaign creation and management interfaces are needed to:
 1. Connect to their MySQL DB
-2. Create Megalayer_DB with: Followup_Focus_Leads table.
-2. Supported options to map: 
-    -existing lead capture forms 
-    -exisitng MySQL lead table fields  
+2. Create Megalayer_DB with: Followup_Focus_Leads table
+
+3. Support option to map:
+    -existing lead capture forms
+    -exisitng MySQL lead table fields
     -newly created lead capture forms
     -custom fields
-   Followup_Focus_Lead table's suggested starting fields are: 
-   id, username, DATETIME, firstname, lastname, fullname, email, phone (optional),  Address (optional), City (optional), State (optional), Zip (optional), 
-   Providing ability to create/add and then map and track 10 or so additional 'custom_fields' onto existing Followup_Focus_Leads table can be added, i.e.: campaign_type, lead_type, lead_source, lead_source_detail
+
+##Followup_Focus_Lead Table Starting Fields
+    Suggested starting fields are:
+    id, 
+    uername,
+    DATETIME,
+    firstname,
+    lastname,
+    fullname,
+    email,
+    phone (optional),
+    Address (optional),
+    City (optional),
+    State (optional),
+    Zip (optional),
+    
+    Provide ability to create/add, track, and or insert into dynamic email, approximately 10 or so additional 'custom_fields' 
+    onto existing Followup_Focus_Lead's table can be added, i.e.: campaign_type, lead_type, lead_source, lead_source_detail
 
 UI FollowupFocus Campaign Creation Panel
       Campaign Identifier Creation Page:

@@ -27,9 +27,9 @@ Followup script can be set to run daily as a chron, or run it once a day manuall
 Desired Future Features:
    - v1.5x Confirm/track emails viewed/opened [pixel served]
    - v1.6x Display quantification of email campains / graph emails opened and website return visit CTA ratios
-    -v1.7x Cookie tracking from website ammends lead detail for first and last page lead came from, which form ver lead used
-    -v1.8x Ability to set up more than one campaign for same lead list say 50/50 for simple A/B testing
-    -v2.0x Create rules GUI interface for campagins that let you modify what happens next for specific actions performed by lead. 
+   - v1.7x Cookie tracking from website ammends lead detail for first and last page lead came from, which form ver lead used
+   - v1.8x Ability to set up more than one campaign for same lead list say 50/50 for simple A/B testing
+   - v2.0x Create rules GUI interface for campagins that let you modify what happens next for specific actions performed by lead
     
 ### Description Detail
 When a specific number of days later (say it's been 2 days) a new lead's age is now 2.

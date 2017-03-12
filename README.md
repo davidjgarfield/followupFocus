@@ -4,7 +4,7 @@
 Megalayer GPL Project
 http://www.megalayer.com
 
-# About
+## About
 A FREE GPL auto-reply dynamic autoresponder followup script. 
 This automation project (usually charged for by many expensive 'email service suites') is generally pretty easy to code and impliment
 but every plugin or emailer creator wants to make a buck.  This script will do the same exact thing, can run on the domain the marketer desires and will automate followup processes keeping it fair in helping our fellow marketing audience.
@@ -16,14 +16,14 @@ MySQL table tracking lead (website form signups) acquisition
   - Script checks #days lead exists and when the days match the rule, script sends desired message
 
 
-## How It Works
+### How It Works
 Followup script can be set to run daily as a chron, or run it once a day manually
   -OR, perhaps worth creating a way a sited pageload would fire the script to run once per day so as long
   as a website had any traffic at all that day, the script would run once.
   Folowup Focus sends out multiple time lapsed promotional emails to leads based on when they are acquired.
 
 
-## Desired Roadmap
+#### Desired Roadmap
 Desired Future Features:
    - v1.5x Confirm/track emails viewed/opened [pixel served]
    - v1.6x Display quantification of email campains / graph emails opened and website return visit CTA ratios
@@ -31,7 +31,7 @@ Desired Future Features:
    - v1.8x Ability to set up more than one campaign for same lead list say 50/50 for simple A/B testing
    - v2.0x Create rules GUI interface for campagins that let you modify what happens next for specific actions performed by lead
     
-### Description Detail
+##### Description Detail
 When a specific number of days later (say it's been 2 days) a new lead's age is now 2.
 FollowupFocus generates and emails a desired first "Thank you, Name" reply for each 2 day old lead.
 To do so, front end campaign creation and management interfaces are needed to:
@@ -45,7 +45,9 @@ To do so, front end campaign creation and management interfaces are needed to:
     -custom fields
 
 ##Followup_Focus_Lead Table Starting Fields
-    Suggested starting fields are:
+    Suggested tables and starting fields are:
+    
+    FOLLOWUP_LEADS_TABLE
     id, 
     uername,
     DATETIME,
@@ -57,7 +59,18 @@ To do so, front end campaign creation and management interfaces are needed to:
     Address (optional),
     City (optional),
     State (optional),
-    Zip (optional),
+    Zip (optional)
+     
+   
+   FILES CREATED OR DATABASE STORED EMAILS?  
+    Contemplating having a form create actual files like 'clientID_email1.php, clientID_email2.php 
+    Since PHP script can include the EMAIL.PHP FILE so something like $FirstName will be dynamically MySQL query pulled....
+    
+    //QUESTION: IF WE USE SAY LARGETEST-BLOB in MySQL table in say an 'Email_Table' can email content containt embedded '$strings' that will still be possible to render out into the PHP $message string for sending the email?    
+    - If so we prefer to run with an Email entities table instead of creating files on their server since doing so becomes a further configuration the end user will need permissions and understanding to complete.  Thus, MySQL largetext-blob will need to be attempted first. 
+    
+    Will have to test if serving either the large-blob text/html content via a database field will still allow a PHP script to dynamically pull strings within the content itself
+    
     
     Provide ability to create/add, track, and or insert into dynamic email, approximately 10 or so additional 'custom_fields' 
     onto existing Followup_Focus_Lead's table can be added, i.e.: campaign_type, lead_type, lead_source, lead_source_detail
@@ -74,7 +87,7 @@ UI FollowupFocus Campaign Creation Panel
               a. text only at first, Rich Text and Graphic HTML [table Outlook compatible] options --versions later-- ) 
       b. the email itself 
 
-Sets up to connect to MySQL DB Followup_Focus table (v1.0 sends up to 5 different emails on 5 future days) 
+Sets up connection to MySQL DB: Followup_Focus_Leads Table (v0.5 sends up to 5 different emails for 5 future days) 
 
 For example, Lead: A (John Smith) enters a website and fills out a form and becomes a lead.  That lead is added to a Followup_Focus campaign along with datetime, and a 'days_old' field.  This script adds +1 day each day to each row in the table.  When lead A is 2 days old, send followup email #1a, when 3 days old send followup email #2 and so on.  
 

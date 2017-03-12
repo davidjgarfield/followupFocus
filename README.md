@@ -7,8 +7,7 @@ http://www.megalayer.com
 # About
 A FREE GPL auto-reply dynamic autoresponder followup script. 
 This automation project (usually charged for by many expensive 'email service suites') is generally pretty easy to code and impliment
-so instead of just greedily coding it out for myself, I figured I'd develop a fully funcitonal 'lite' version in GPL and if there's a need
-for premium features, well I could then charge a small fee to unlock them still keeping it fair in helping our fellow marketing audience.
+but every plugin or emailer creator wants to make a buck.  This script will do the same exact thing, can run on the domain the marketer desires and will automate followup processes keeping it fair in helping our fellow marketing audience.
 
 MySQL table tracking lead (website form signups) acquisition
   - Script updates +1 day to each lead on the list
@@ -26,14 +25,13 @@ Followup script can be set to run daily as a chron, or run it once a day manuall
 
 ## Desired Roadmap
 Desired Future Features:
-v1.5 Update lead data to confirm/track email viewed/opened [pixel serve driven]
-v1.6 Display quantification of email campains / graph emails opened and website return visit CTA ratios
-v1.7 Cookie tracking data ammend lead detail for first and last page lead came from, which form ver lead used
-v1.8 Ability to set up more than one campaign for same lead list say 50/50 for simple A/B testing
-v2.0 Create rules to modify future email campaign versions based on a leads previous actions
-
-
-## Description Detail
+   - v1.5x Confirm/track emails viewed/opened [pixel served]
+   - v1.6x Display quantification of email campains / graph emails opened and website return visit CTA ratios
+    -v1.7x Cookie tracking from website ammends lead detail for first and last page lead came from, which form ver lead used
+    -v1.8x Ability to set up more than one campaign for same lead list say 50/50 for simple A/B testing
+    -v2.0x Create rules GUI interface for campagins that let you modify what happens next for specific actions performed by lead. 
+    
+### Description Detail
 When a specific number of days later (say it's been 2 days) a new lead's age is now 2.
 FollowupFocus generates and emails a desired first "Thank you, Name" reply for each 2 day old lead.
 To do so, front end campaign creation and management interfaces are needed to:
